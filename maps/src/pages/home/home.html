@@ -1,25 +1,20 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Maps
+    <ion-title>Início
+      <button ion-button id="centro1" (click)="logout()">Logout</button>
     </ion-title>
   </ion-navbar>
-
-   <ion-buttons end>
-    	<button ion-button (click)="addMarker()"> 
-    		<ion-icon name="add">
-    		</ion-icon>
-    		Add Marker
-
-    	</button>
-    </ion-buttons>
-
- </ion-header>
+</ion-header>
 
 <ion-content padding>
-  The world is your oyster.
+  <h2>Bem-Vindo ao MapsApp!</h2>
   <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
+    Projeto que tem como finalidade dizer a sua localização atual e listar seus chekin nos lugares visitados.
   </p>
-  <div #map id="map"></div>
+  <p>
+    Take a look at the <code>src/pages/</code> directory to add or change tabs,
+    update any existing page or create new pages.
+  </p>
+
+
 </ion-content>

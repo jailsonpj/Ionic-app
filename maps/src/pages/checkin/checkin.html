@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Check-in
+      <button ion-button id="centro1">Logout</button>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let a of feeds" (click)="mostrarDados(a)" style="border: 15px solid white; border-radius: 10px;">
+
+    <ion-item>
+      <h1 style="font-size: 20px;">
+        <strong>{{ a.nome }}</strong>
+      </h1>
+    </ion-item>
+
+    <ion-card-content>
+      <img src="https://maps.googleapis.com/maps/api/staticmap?center={{a.latitude}},{{a.longitude}}&zoom=14&size=300x300&markers=color:red|{{a.lati}},{{a.longi}}|&key=AIzaSyAKFExZLuWmsuUkgnjLY0QpJD2CGj_EAw4">
+    </ion-card-content>
+
+  </ion-card>
+</ion-content>
