@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { ToastController } from 'ionic-angular';
+import { ToastController,NavController } from 'ionic-angular';
 import { MapaPage } from '../mapa/mapa';
 import { CheckinPage } from '../checkin/checkin';
 import { HomePage } from '../home/home';
 import { TimelinePage } from '../timeline/timeline';
+//import { LoginPage } from '../login/login';
 import { AngularFireAuth } from 'angularfire2/auth';
 
 
@@ -18,7 +19,8 @@ export class TabsPage {
   tab4Root = TimelinePage;
 
 
-  constructor(private afAuth: AngularFireAuth,private toast: ToastController) {
+
+  constructor(public navCtrl: NavController,private afAuth: AngularFireAuth,private toast: ToastController) {
 
   }
 

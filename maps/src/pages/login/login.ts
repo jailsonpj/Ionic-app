@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams,ToastController } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
 import {User} from '../models/user';
 import {RegisterPage} from '../register/register';
@@ -17,7 +17,7 @@ export class LoginPage {
   //public senha: String;
   user = {} as User;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public afAuth: AngularFireAuth) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public afAuth: AngularFireAuth,public toastCtrl: ToastController) {
 
   }
 
@@ -32,9 +32,9 @@ export class LoginPage {
       if(result){
         this.navCtrl.setRoot(TabsPage);
       }
-
     }
     catch(e){
+      this.toastCtrl.create({ duration: 3000, position: 'bottom', message: 'Erro ao efetuar o login' }).present();
       console.error(e);
     }
 

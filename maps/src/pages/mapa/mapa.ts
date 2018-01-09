@@ -106,6 +106,9 @@ export class MapaPage {
         lista.hora = data.getHours();
         lista.minuto = data.getMinutes();
         lista.segundo = data.getSeconds();
+        lista.dia = data.getDate();
+        lista.mes = data.getMonth()+1;
+        lista.ano = data.getFullYear();
 
   			let mapOptions = {
   				center: latLng,

@@ -19,10 +19,12 @@ export class CheckinPage {
         if(value){
           for(let i of value){
             this.feeds.push(i);
+            //console.log(feeds);
           }
         }
       });
     });
+
   }
 
   public mostrarDados(local:any){
@@ -33,4 +35,5 @@ export class CheckinPage {
     });
     alert.present();
   }
+
 }
