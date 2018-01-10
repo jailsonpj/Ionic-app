@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams,ToastController } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
-import {User} from '../models/user';
+import {User} from '../../models/user';
 import {RegisterPage} from '../register/register';
 import { TabsPage } from '../tabs/tabs';
 
@@ -22,12 +22,12 @@ export class LoginPage {
   }
 
   register(){
-    this.navCtrl.push('RegisterPage');
+    this.navCtrl.push(RegisterPage);
   }
 
   async login(user: User){
     try{
-      const result = this.afAuth.auth.signInWithEmailAndPassword(user.email,user.password);
+      const result = await this.afAuth.auth.signInWithEmailAndPassword(user.email,user.password);
       console.log(result);
       if(result){
         this.navCtrl.setRoot(TabsPage);
@@ -43,5 +43,4 @@ export class LoginPage {
   logout(){
     this.navCtrl.setRoot(LoginPage);
   }
-
 }

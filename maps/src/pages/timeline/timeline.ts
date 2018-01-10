@@ -1,10 +1,10 @@
-import { Component,ElementRef,ViewChild } from '@angular/core';
+import { Component} from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {Geolocation} from '@ionic-native/geolocation';
 import { Storage } from '@ionic/storage';
 
 declare var google;
-var dados:any=[];
+//var dados:any=[];
 var feeds: any = [];
 /**
  * Generated class for the TimelinePage page.
@@ -60,7 +60,7 @@ export class TimelinePage {
          // Instantiate an info window to hold step text.
          var stepDisplay = new google.maps.InfoWindow;
 
-         var onChangeHandler = this.calculateAndDisplayRoute(directionsDisplay, directionsService, markerArray, stepDisplay, map);
+         this.calculateAndDisplayRoute(directionsDisplay, directionsService, markerArray, stepDisplay, map);
 
          //document.getElementById('start').addEventListener('change', onChangeHandler);
         // document.getElementById('end').addEventListener('change', onChangeHandler);

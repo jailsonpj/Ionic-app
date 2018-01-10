@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController,App } from 'ionic-angular';
-import { LoginPageModule } from '../login/login';
+import { NavController } from 'ionic-angular';
+//import { LoginPage } from '../login/login';
 
 
 @Component({
@@ -13,7 +13,8 @@ export class HomePage {
 
   }
 
-  logout(){
-    //this.logout.logout();
-  }
+  /*logout(){
+    var log = LoginPage;
+    log.logout();
+  }*/
 }

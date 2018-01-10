@@ -4,7 +4,6 @@ import { MapaPage } from '../mapa/mapa';
 import { CheckinPage } from '../checkin/checkin';
 import { HomePage } from '../home/home';
 import { TimelinePage } from '../timeline/timeline';
-//import { LoginPage } from '../login/login';
 import { AngularFireAuth } from 'angularfire2/auth';
 
 

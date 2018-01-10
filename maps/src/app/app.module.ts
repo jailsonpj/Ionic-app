@@ -7,9 +7,9 @@ import { MapaPage } from '../pages/mapa/mapa';
 import { CheckinPage } from '../pages/checkin/checkin';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
-import { LoginPage } from '../pages/login/login';
-import { TimelinePage } from '../pages/timeline/timeline';
-//import { RegisterPage} from '../pages/register/register';
+import { LoginPageModule } from '../pages/login/login.module';
+import { TimelinePageModule } from '../pages/timeline/timeline.module';
+import { RegisterPageModule} from '../pages/register/register.module';
 import {Geolocation} from '@ionic-native/geolocation';
 import {IonicStorageModule} from '@ionic/storage';
 
@@ -34,9 +34,6 @@ export const firebaseConfig = {
     MapaPage,
     CheckinPage,
     HomePage,
-    LoginPage,
-  //  RegisterPage,
-    TimelinePage,
     TabsPage
   ],
   imports: [
@@ -44,7 +41,10 @@ export const firebaseConfig = {
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot(),
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    LoginPageModule,
+    RegisterPageModule,
+    TimelinePageModule
 
   ],
   bootstrap: [IonicApp],
@@ -53,9 +53,6 @@ export const firebaseConfig = {
     MapaPage,
     CheckinPage,
     HomePage,
-    LoginPage,
-    //RegisterPage,
-    TimelinePage,
     TabsPage
   ],
   providers: [
