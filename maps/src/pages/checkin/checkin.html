@@ -15,11 +15,23 @@
         <strong>{{ a.nome }}</strong>
       </h1>
     </ion-item>
-
-    <ion-card-content>
-
+    <ion-card>
     <img src="https://maps.googleapis.com/maps/api/staticmap?center={{a.latitude}},{{a.longitude}}&zoom=14&size=300x300&markers=color:red|{{a.lati}},{{a.longi}}|&key=AIzaSyAKFExZLuWmsuUkgnjLY0QpJD2CGj_EAw4">
-    </ion-card-content>
+    
+    <ion-item>
+      <ion-icon name="md-locate" item-start large></ion-icon>
+        <h2>Location</h2>
+        <p>{{a.nome}}</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="md-clock" item-left large ></ion-icon>
+      <h2>Data e Hora Checkin</h2>
+      <p>{{a.dia}}/{{a.mes}}/{{a.ano}}</p>
+      <p>{{a.hora}}:{{a.minuto}}:{{a.segundo}}</p>
+    </ion-item>
+
+  </ion-card>
 
   </ion-card>
 </ion-content>
